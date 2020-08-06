@@ -2,8 +2,6 @@ import React from 'react';
 import WelcomeList from './components/Welcome/WelcomeList';
 import NameForm from  "./components/Welcome/NameForm";
 import Question from './components/Questions/Question';
-import QuestionCount from "./components/Questions/QuestionCount";
-import AnswerOption from "./components/Answers/AnswerOption";
 
 import './App.css';
 
@@ -52,7 +50,7 @@ class App extends React.Component{
      console.log('Checking Id', this.state.pokemonTrainerInfo[0].id)
      return (
        <div>
-         <h1>Sorting Hat Quiz</h1>
+         <h1>Pokemon Gym Leader Type Quiz</h1>
         <WelcomeList 
         nameProp={this.state.pokemonTrainerInfo} 
         /> 
@@ -68,8 +66,6 @@ class App extends React.Component{
       value={this.state.trainerList}
       
       />
- 
-      <h3>Your Hogwarts name is: {this.state.trainerList}</h3>
       </div>
        )
        
