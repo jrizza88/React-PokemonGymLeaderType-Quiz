@@ -1,14 +1,20 @@
 import React from 'react';
 import WelcomeList from './components/Welcome/WelcomeList';
 import NameForm from  "./components/Welcome/NameForm";
-import Question from './components/Questions/Question';
-
+import Quiz from './components/Quiz';
 import './App.css';
 
 class App extends React.Component{
   constructor() {
     super();
     this.state = {
+      counter: 0,
+      questionId: 1,
+      question: '',
+      answerOptions: [],
+      answer: '',
+      answersCount: {},
+      result: '',
       pokemonTrainerInfo: [
         {
         trainer: '',
@@ -54,7 +60,8 @@ class App extends React.Component{
         <WelcomeList 
         nameProp={this.state.pokemonTrainerInfo} 
         /> 
-        <Question content="Out of the colors listed, which color is your most preferred?" />
+        <Quiz />
+        {/* <Question content="Out of the colors listed, which color is your most preferred?" /> */}
       </div>
      ) } else {
        return (
