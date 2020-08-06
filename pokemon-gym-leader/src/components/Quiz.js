@@ -5,16 +5,16 @@ import Question from './Questions/Question'
 import QuestionCount from "./Questions/QuestionCount";
 import AnswerOption from "./Answers/AnswerOption";
 
-const Quiz = ({question, questionId, questionTotal}) => {
+const Quiz = ({question, questionId, questionTotal, answerOptions}) => {
     return (
         <div className="quiz">
           <QuestionCount
-            counter={props.questionId}
-            total={props.questionTotal}
+            counter={questionId}
+            total={questionTotal}
           />
-          <Question content={props.question} />
+          <Question content={question} />
           <ul className="answerOptions">
-            {props.answerOptions.map(renderAnswerOptions)}
+            {answerOptions.map(renderAnswerOptions)}
           </ul>
         </div>
     );
