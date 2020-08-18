@@ -5,6 +5,7 @@ import Quiz from './components/Quiz';
 import Result from './components/Result';
 import quizQuestions from './api/quizQuestions';
 import styled from "styled-components";
+import gymleaders from "./images/pokemon-gym-leaders.jpg"
 
 
 import './App.css';
@@ -168,6 +169,7 @@ class App extends React.Component{
        return (
          <AppContainer>
           <h1>Pokemon Gym Leader Type Quiz</h1>
+          <GymPhoto src={gymleaders} />
       <QuizMessage>Welcome to the Pokemon Gym Leader type Quiz. Find out which pokemon type you belong in today. But first, please enter your name.</QuizMessage>
         <NameForm 
       handlePropSubmit={this.addName} 
@@ -199,11 +201,18 @@ margin-left: auto;
 `
 
 const QuizMessage = styled.div`
-font-size: 20px;
+font-size: 30px;
 max-width: 900px;
+text-align: center;
+font-weight: 500;
 display: flex;
 align-items: center;
 justify-content: center;
+padding-bottom: 20px;
+`
+
+const GymPhoto = styled.img`
+width: 800px;
 `
 
 
