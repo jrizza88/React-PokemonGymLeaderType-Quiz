@@ -2,7 +2,10 @@ import React from 'react';
 import WelcomeList from './components/Welcome/WelcomeList';
 import NameForm from  "./components/Welcome/NameForm";
 import Quiz from './components/Quiz';
+import Result from './components/Result';
 import quizQuestions from './api/quizQuestions';
+import styled from "styled-components";
+
 
 import './App.css';
 
@@ -86,7 +89,7 @@ class App extends React.Component{
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-        // do nothing for now
+        setTimeout(() => this.setResults(this.getResults()), 300);
       }
   }
 
@@ -112,57 +115,96 @@ class App extends React.Component{
     });
   }
 
-  render(){
-   if (this.state.pokemonTrainerInfo[0].id) { 
-     console.log('Checking Id', this.state.pokemonTrainerInfo[0].id)
-     return (
-       <div>
-         <h1>Pokemon Gym Leader Type Quiz</h1>
-        <WelcomeList 
-        nameProp={this.state.pokemonTrainerInfo} 
-        /> 
-        <Quiz
+  getResults() {
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+
+    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
+  }
+
+  setResults (result) {
+    if (result.length === 1) {
+      this.setState({ result: result[0] });
+    } else {
+      this.setState({ result: 'Undetermined' });
+    }
+  }
+
+  renderQuiz() {
+    return (
+      <Quiz
       answer={this.state.answer}
       answerOptions={this.state.answerOptions}
       questionId={this.state.questionId}
       question={this.state.question}
       questionTotal={quizQuestions.length}
       onAnswerSelected={this.handleAnswerSelected}
-    />
-        {/* <Question content="Out of the colors listed, which color is your most preferred?" /> */}
-      </div>
+      />
+    );
+  }
+  
+  renderResult() {
+    return (
+      <Result result={this.state.result} />
+    );
+  }
+
+
+
+  render(){
+   if (this.state.pokemonTrainerInfo[0].id) { 
+     console.log('Checking Id', this.state.pokemonTrainerInfo[0].id)
+     return (
+       <AppContainer>
+         <h1>Pokemon Gym Leader Type Quiz</h1>
+        <WelcomeList 
+        nameProp={this.state.pokemonTrainerInfo} 
+        /> 
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+      </AppContainer>
      ) } else {
        return (
-         <div>
-      <h1>Welcome to the Pokemon Gym Leader type Quiz. Find out which pokemon type you belong in today. But first, please enter your name.</h1>
+         <AppContainer>
+          <h1>Pokemon Gym Leader Type Quiz</h1>
+      <QuizMessage>Welcome to the Pokemon Gym Leader type Quiz. Find out which pokemon type you belong in today. But first, please enter your name.</QuizMessage>
         <NameForm 
       handlePropSubmit={this.addName} 
       handleChangeProp={this.handleChangeState} 
       value={this.state.trainerList}
       
       />
-      </div>
+      </AppContainer>
        )
        
     }
     
-  // return (
-  //   <div className="App">
-  //     <NameForm 
-  //     handlePropSubmit={this.addName} 
-  //     handleChangeProp={this.handleChangeState} 
-  //     value={this.state.trainerList}
-      
-  //     />
- 
-  //     <h3>Your Hogwarts name is: {this.state.trainerList}</h3>
 
-  //     <WelcomeList 
-  //     nameProp={this.state.pokemonTrainerInfo} 
-  //     />
-  //   </div>
-  // );
    }
 }
+
+const AppContainer = styled.section`
+display: flex;
+flex-direction: column;
+background: whitesmoke;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+`
+
+const QuizMessage = styled.div`
+font-size: 20px;
+max-width: 900px;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+
 
 export default App;
