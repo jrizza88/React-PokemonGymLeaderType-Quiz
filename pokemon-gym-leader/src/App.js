@@ -17,6 +17,7 @@ class App extends React.Component{
       counter: 0,
       questionId: 1,
       question: '',
+      questionImage: '',
       answerOptions: [],
       answer: '',
       answersCount: {},
@@ -28,11 +29,6 @@ class App extends React.Component{
         }
       ],
       trainerList: [],
-      // pokemonQuiz: {
-      //   counter: 0,
-      //   questionId: 1,
-      //   question: ''
-      // }
     }
   }
 
@@ -41,6 +37,7 @@ class App extends React.Component{
   
     this.setState({
       question: quizQuestions[0].question,
+      questionImage: quizQuestions[0].image,
       answerOptions: shuffledAnswerOptions[0]
     });
   }
@@ -111,6 +108,7 @@ class App extends React.Component{
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
+      questionImage: quizQuestions[counter].questionImage,
       answerOptions: quizQuestions[counter].answers,
       answer: ''
     });
@@ -140,6 +138,7 @@ class App extends React.Component{
       answerOptions={this.state.answerOptions}
       questionId={this.state.questionId}
       question={this.state.question}
+      imageQuestion={this.state.questionImage}
       questionTotal={quizQuestions.length}
       onAnswerSelected={this.handleAnswerSelected}
       />
@@ -213,6 +212,8 @@ padding-bottom: 20px;
 
 const GymPhoto = styled.img`
 width: 800px;
+
+
 `
 
 

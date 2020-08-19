@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
 
-const Question = ({content}) => {
+const Question = ({content, imageContent}) => {
 return (
     <div>
-        Question Div...
+        <ImageContent src={imageContent} alt={Date.now()}/> 
         <h2>{content}</h2>
         
     </div>
@@ -16,3 +17,9 @@ Question.propTypes = {
   };
 
 export default Question;
+
+
+const ImageContent = styled.img`
+max-width: 800px;
+width: 100%
+`

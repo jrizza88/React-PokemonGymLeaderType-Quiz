@@ -1,5 +1,10 @@
+
+const live = require('../images/question1_live.jpg');
+
 let quizQuestions = [
-    {
+    {   
+        //image: 'https://acuriousjasmine.files.wordpress.com/2015/05/lumiose_city_artwork.png',
+        image: live,
         question: "Where would you rather live?",
         answers: [
             {

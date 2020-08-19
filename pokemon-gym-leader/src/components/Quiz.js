@@ -3,7 +3,7 @@ import Question from './Questions/Question'
 import QuestionCount from "./Questions/QuestionCount";
 import AnswerOption from "./Answers/AnswerOption";
 
-const Quiz = ({question, questionId, questionTotal, answerOptions, answer, onAnswerSelected}) => {
+const Quiz = ({question, imageQuestion, questionId, questionTotal, answerOptions, answer, onAnswerSelected}) => {
     const renderAnswerOptions = (key) => {
         return (
           <AnswerOption
@@ -22,7 +22,7 @@ const Quiz = ({question, questionId, questionTotal, answerOptions, answer, onAns
             counter={questionId}
             total={questionTotal}
           />
-          <Question content={question} />
+          <Question content={question} imageContent={imageQuestion}/>
           <ul className="answerOptions">
             {answerOptions.map(renderAnswerOptions)}
           </ul>
