@@ -3,7 +3,6 @@ const live = require('../images/question1_live.jpg');
 
 let quizQuestions = [
     {   
-        //image: 'https://acuriousjasmine.files.wordpress.com/2015/05/lumiose_city_artwork.png',
         image: live,
         question: "Where would you rather live?",
         answers: [
@@ -21,11 +20,11 @@ let quizQuestions = [
             },
             {
                 type: "Grass",
-                content: "Vermillion City"
+                content: "Celadon City"
             },
             {
                 type: "Rock",
-                content: "Vermillion City"
+                content: "Pewter City"
             },
             {
                 type: "Psychic",
@@ -37,23 +36,23 @@ let quizQuestions = [
             },
             {
                 type: "Fairy",
-                content: "Vermillion City"
+                content: "Laverre City"
             },
             {
                 type: "Fighting",
-                content: "Vermillion City"
+                content: "Cianwood City"
             },
             {
                 type: "Dragon",
-                content: "Vermillion City"
+                content: "Opelucid City"
             },
             {
                 type: "Poison",
-                content: "Vermillion City"
+                content: "Fuchsia City"
             },
             {
                 type: "Bug",
-                content: "Vermillion City"
+                content: "Castelia City"
             },
             {
                 type: "Ice",
@@ -61,137 +60,137 @@ let quizQuestions = [
             },
             {
                 type: "Flying",
-                content: "Vermillion City"
+                content: "Violet City"
             },
             {
                 type: "Steel",
-                content: "Vermillion City"
+                content: "Olivine City"
             },
             {
                 type: "Ground",
-                content: "Vermillion City"
+                content: "Driftveil City"
             },
             {
                 type: "Normal",
-                content: "Vermillion City"
+                content: "Goldenrod City"
             },
             {
                 type: "Ghost",
-                content: "Vermillion City"
+                content: "Hearthome City"
             }
         ]
     },
     {
-        question: "Question 2?",
+        question: "What is your favorite scene?",
         answers: [
             {
                 type: "Water",
-                content: "Cerulean City"
+                content: "Swim, swim at the beach, a pool, even a random pond."
             },
             {
                 type: "Fire",
-                content: "Lavaridge Town"
+                content: "Warm weather is key"
             },
             {
                 type: "Electric",
-                content: "Vermillion City"
+                content: "Into a rave or EDM concert with lots of lights"
             },
             {
                 type: "Grass",
-                content: "Vermillion City"
+                content: "Serene Nature scene, with all the grass"
             },
             {
                 type: "Rock",
-                content: "Vermillion City"
+                content: "A nice hike"
             },
             {
                 type: "Psychic",
-                content: "Vermillion City"
+                content: "To be one with nature, no matter where I am "
             },
             {
                 type: "Dark",
-                content: "Vermillion City"
+                content: "Doesn't really matter, but I am a night person"
             },
             {
                 type: "Fairy",
-                content: "Vermillion City"
+                content: "A flower garden"
             },
             {
                 type: "Fighting",
-                content: "Vermillion City"
+                content: "Watching a MMA fight"
             },
             {
                 type: "Dragon",
-                content: "Vermillion City"
+                content: "Somewhere most people don't know about or go to."
             },
             {
                 type: "Poison",
-                content: "Vermillion City"
+                content: "Getting into the nitty gritty of a city"
             },
             {
                 type: "Bug",
-                content: "Vermillion City"
+                content: "Collecting things, no matter where I travel"
             },
             {
                 type: "Ice",
-                content: "Vermillion City"
+                content: "A ski or snowboarding trip"
             },
             {
                 type: "Flying",
-                content: "Vermillion City"
+                content: "Flying to my next destination, anywhere in the world."
             },
             {
                 type: "Steel",
-                content: "Vermillion City"
+                content: "To just be in a stable place"
             },
             {
                 type: "Ground",
-                content: "Vermillion City"
+                content: "Searching and collecting items"
             },
             {
                 type: "Normal",
-                content: "Vermillion City"
+                content: "Just getting a nice bite to eat with a friend"
             },
             {
                 type: "Ghost",
-                content: "Vermillion City"
+                content: "Partying like there is no tomorrow. "
             }
         ]
     },
     {
-        question: "Question 3?",
+        question: "How would you describe your significant other or bestie?",
         answers: [
             {
                 type: "Water",
-                content: "Cerulean City"
+                content: "Chill, go with the flow."
             },
             {
                 type: "Fire",
-                content: "Lavaridge Town"
+                content: "Super quick with everything"
             },
             {
                 type: "Electric",
-                content: "Vermillion City"
+                content: "Exciting yet charming"
             },
             {
                 type: "Grass",
-                content: "Vermillion City"
+                content: "Relaxed, but focused."
             },
             {
                 type: "Rock",
-                content: "Vermillion City"
+                content: "Strong person"
             },
             {
                 type: "Psychic",
-                content: "Vermillion City"
+                content: "Extremely intuitive"
             },
             {
                 type: "Dark",
-                content: "Vermillion City"
+                content: "Mysterious"
             },
             {
                 type: "Fairy",
-                content: "Vermillion City"
+                content: "The friendliest person you will ever meet"
             },
             {
                 type: "Fighting",

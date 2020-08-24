@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const AnswerOption = ({answerType , answer, onAnswerSelected, answerContent}) => {
   return (
-    <li className="answerOption">
+    <AnswerOptionList>
       <input
         type="radio"
         className="radioCustomButton"
@@ -17,7 +18,7 @@ const AnswerOption = ({answerType , answer, onAnswerSelected, answerContent}) =>
       <label className="radioCustomLabel" htmlFor={answerType}>
         {answerContent}
       </label>
-    </li>
+    </AnswerOptionList>
   );
 }
 
@@ -29,3 +30,11 @@ AnswerOption.propTypes = {
 };
 
 export default AnswerOption;
+
+
+const AnswerOptionList = styled.li`
+list-style: none;
+font-size: 1.3rem;
+margin: 0;
+padding: 0;
+`

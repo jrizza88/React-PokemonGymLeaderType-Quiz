@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
 
 const QuestionCount = ({counter, total}) => {
     return (
-        <div className="questionCountContainer">
+        <QuestionCountContainer>
            Question <span> {counter}</span> of <span>{total}</span>
-        </div>
+        </QuestionCountContainer>
     )
     }
     
@@ -15,3 +16,8 @@ const QuestionCount = ({counter, total}) => {
       };
     
     export default QuestionCount;
+
+const QuestionCountContainer = styled.div`
+padding: 1.2rem 2rem 0;
+font-size: 16px;
+`
