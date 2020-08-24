@@ -36,5 +36,10 @@ const AnswerOptionList = styled.li`
 list-style: none;
 font-size: 1.3rem;
 margin: 0;
-padding: 0;
+padding: 20px;
+border-top: 1px solid black;
+
+:hover {
+  background: lavender;
+}
 `
