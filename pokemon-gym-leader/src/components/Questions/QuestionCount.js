@@ -19,5 +19,6 @@ const QuestionCount = ({counter, total}) => {
 
 const QuestionCountContainer = styled.div`
 padding: 1.2rem 2rem 0;
-font-size: 16px;
+font-size: 1.1rem;
+margin: 20px 0;
 `

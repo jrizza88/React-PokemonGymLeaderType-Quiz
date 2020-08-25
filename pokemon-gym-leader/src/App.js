@@ -200,14 +200,17 @@ margin-left: auto;
 `
 
 const QuizMessage = styled.div`
-font-size: 30px;
-max-width: 900px;
+display: flex;
+font-size: 1.2rem;
+max-width: 600px;
 text-align: center;
 font-weight: 500;
-display: flex;
 align-items: center;
 justify-content: center;
 padding-bottom: 20px;
+background: lightcoral;
+margin: 20px 0;
+padding: 20px 100px;
 `
 
 const GymPhoto = styled.img`
