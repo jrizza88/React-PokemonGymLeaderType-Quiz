@@ -1,5 +1,9 @@
 
 const live = require('../images/question1_live.jpg');
+const scene = require('../images/question2_scene.jpg');
+const lovers = require('../images/question3_lovers.jpg');
+const attack = require('../images/question4_attack.jpg');
+const styleGym = require('../images/question5_style.jpg');
 
 let quizQuestions = [
     {   
@@ -56,7 +60,7 @@ let quizQuestions = [
             },
             {
                 type: "Ice",
-                content: "Vermillion City"
+                content: "Snowpoint City"
             },
             {
                 type: "Flying",
@@ -81,6 +85,7 @@ let quizQuestions = [
         ]
     },
     {
+        image: scene,
         question: "What is your favorite scene?",
         answers: [
             {
@@ -157,7 +162,7 @@ let quizQuestions = [
             }
         ]
     },
-    {
+    {   image: lovers,
         question: "How would you describe your significant other or bestie?",
         answers: [
             {
@@ -194,197 +199,126 @@ let quizQuestions = [
             },
             {
                 type: "Fighting",
-                content: "Vermillion City"
+                content: "Always ready to turn up and battle it out for you"
             },
             {
                 type: "Dragon",
-                content: "Vermillion City"
+                content: "Kind-hearted, yet brave and powerful"
             },
             {
                 type: "Poison",
-                content: "Vermillion City"
+                content: "Natural born fight of the system"
             },
             {
                 type: "Bug",
-                content: "Vermillion City"
+                content: "Resourceful and sticks to their usual activities"
             },
             {
                 type: "Ice",
-                content: "Vermillion City"
+                content: "Not friendly at first, but loyal once you get to know them"
             },
             {
                 type: "Flying",
-                content: "Vermillion City"
+                content: "A true freespirit of the world who loves to travel"
             },
             {
                 type: "Steel",
-                content: "Vermillion City"
+                content: "Rock solid and emboldened personality"
             },
             {
                 type: "Ground",
-                content: "Vermillion City"
+                content: "Determined, organized, but stubborn"
             },
             {
                 type: "Normal",
-                content: "Vermillion City"
+                content: "Put together and friendly"
             },
             {
                 type: "Ghost",
-                content: "Vermillion City"
+                content: "Distant, but present when together."
             }
         ]
     },
-    {
-        question: "Question 4?",
+    {   
+        image: attack,
+        question: "You get attacked by a mysterious pokemon, what do you attack it with?",
         answers: [
             {
                 type: "Water",
-                content: "Cerulean City"
+                content: "Hydro pump"
             },
             {
                 type: "Fire",
-                content: "Lavaridge Town"
+                content: "FLamethrower"
             },
             {
                 type: "Electric",
-                content: "Vermillion City"
+                content: "Thunderbolt"
             },
             {
                 type: "Grass",
-                content: "Vermillion City"
-            },
-            {
-                type: "Rock",
-                content: "Vermillion City"
+                content: "Razor Leaf"
             },
             {
                 type: "Psychic",
-                content: "Vermillion City"
+                content: "Psybeam"
             },
             {
                 type: "Dark",
-                content: "Vermillion City"
-            },
-            {
-                type: "Fairy",
-                content: "Vermillion City"
-            },
-            {
-                type: "Fighting",
-                content: "Vermillion City"
-            },
-            {
-                type: "Dragon",
-                content: "Vermillion City"
-            },
-            {
-                type: "Poison",
-                content: "Vermillion City"
-            },
-            {
-                type: "Bug",
-                content: "Vermillion City"
-            },
-            {
-                type: "Ice",
-                content: "Vermillion City"
-            },
-            {
-                type: "Flying",
-                content: "Vermillion City"
-            },
-            {
-                type: "Steel",
-                content: "Vermillion City"
-            },
-            {
-                type: "Ground",
-                content: "Vermillion City"
+                content: "Dark Pulse"
             },
             {
                 type: "Normal",
-                content: "Vermillion City"
+                content: "Screech"
             },
             {
-                type: "Ghost",
-                content: "Vermillion City"
+                type: "Fighting",
+                content: "Cross Chop"
+            },
+            {
+                type: "Dragon",
+                content: "Draco Meter"
             }
         ]
     },
-    {
-        question: "Question 5?",
+    {   image: styleGym,
+        question: "Your style as a gym leader",
         answers: [
             {
-                type: "Water",
-                content: "Cerulean City"
-            },
-            {
-                type: "Fire",
-                content: "Lavaridge Town"
-            },
-            {
-                type: "Electric",
-                content: "Vermillion City"
-            },
-            {
-                type: "Grass",
-                content: "Vermillion City"
-            },
-            {
                 type: "Rock",
-                content: "Vermillion City"
-            },
-            {
-                type: "Psychic",
-                content: "Vermillion City"
-            },
-            {
-                type: "Dark",
-                content: "Vermillion City"
-            },
-            {
-                type: "Fairy",
-                content: "Vermillion City"
-            },
-            {
-                type: "Fighting",
-                content: "Vermillion City"
-            },
-            {
-                type: "Dragon",
-                content: "Vermillion City"
-            },
+                content: "Polished, but hardy"
+            },           
             {
                 type: "Poison",
-                content: "Vermillion City"
+                content: "Sneaky and lethal"
             },
             {
                 type: "Bug",
-                content: "Vermillion City"
+                content: "Very tactical"
             },
             {
                 type: "Ice",
-                content: "Vermillion City"
+                content: "Resistant to surprises"
             },
             {
                 type: "Flying",
-                content: "Vermillion City"
+                content: "Fast and furious"
             },
             {
                 type: "Steel",
-                content: "Vermillion City"
+                content: "Strict and solid"
             },
             {
                 type: "Ground",
-                content: "Vermillion City"
+                content: "Down to earth, but no slacker"
             },
             {
-                type: "Normal",
-                content: "Vermillion City"
+                type: "Fairy",
+                content: "Giggly"
             },
             {
                 type: "Ghost",
-                content: "Vermillion City"
+                content: "Tricky and clever"
             }
         ]
     }

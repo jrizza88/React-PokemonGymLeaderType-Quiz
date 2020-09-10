@@ -108,7 +108,7 @@ class App extends React.Component{
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].question,
-      questionImage: quizQuestions[counter].questionImage,
+      questionImage: quizQuestions[counter].image,
       answerOptions: quizQuestions[counter].answers,
       answer: ''
     });
@@ -197,6 +197,7 @@ padding-right: 15px;
 padding-left: 15px;
 margin-right: auto;
 margin-left: auto;
+margin-top: 20px;
 `
 
 const QuizMessage = styled.div`

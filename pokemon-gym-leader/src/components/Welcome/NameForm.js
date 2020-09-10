@@ -6,7 +6,7 @@ const NameForm = ({value, handleChangeProp, handlePropSubmit}) => {
     return (
         <FormContainer>
             <FormLabel>
-            Enter Name:
+            <Name>Enter Name:</Name>
             <InputBar 
                 onChange={handleChangeProp}
                 type="text"
@@ -38,8 +38,13 @@ width: 100%;
 const FormLabel = styled.label`
 margin: 10px 0;
 padding-top: 20px;
-font-size: 50px;
+font-size: 2rem;
 `
+
+const Name = styled.span`
+padding-right: 20px;
+`
+
 
 const InputBar = styled.input`
 padding: 20px 10px 15px 10px;
