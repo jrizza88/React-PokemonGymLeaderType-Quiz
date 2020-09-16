@@ -1,4 +1,4 @@
 [build]
-base = "poekmon-gym-leader/"
+base = "pokemon-gym-leader/"
 publish = "build/"
 command = "yarn build"
