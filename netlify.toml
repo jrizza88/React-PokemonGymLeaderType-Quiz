@@ -1,0 +1,4 @@
+[build]
+base = "poekmon-gym-leader/"
+publish = "build/"
+command = "yarn build"
